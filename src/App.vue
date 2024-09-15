@@ -8,9 +8,10 @@ import HomeCards from "@/components/HomeCards.vue"
 <template>
  <Navbar />
  <Hero title="Test Title" subTitle="Find vue jobs" />
+ 
+<HomeCards />
 </template>
 
-<HomeCards />
 
 <style scoped>
 
