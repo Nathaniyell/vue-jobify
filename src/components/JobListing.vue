@@ -38,7 +38,7 @@ showFullDescription.value = !showFullDescription.value
                   {{truncatedDescription}}
                 </p>
                 <button
-                class="text-violet-500 hover:text-violet-600 mb-5"@click="toggleDescriptionLength">{{showFullDescription? "Less": "More"}} </button>
+                class="text-violet-500 hover:text-violet-600 mb-5" @click="toggleDescriptionLength">{{showFullDescription? "Less": "More"}} </button>
               </div>
 
               <h3 class="text-violet-500 mb-2">{{job.salary}} / Year</h3>
