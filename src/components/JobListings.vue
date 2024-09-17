@@ -19,7 +19,7 @@ isLoading: true
 onMounted(async()=>{
     try{
 
-        const response = await fetch("http://localhost:5000/jobs")
+        const response = await fetch("api/jobs")
         const data = await response.json()
         state.jobs = data
     }catch(error){

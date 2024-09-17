@@ -1,6 +1,7 @@
 <script setup>
 import {reactive, onMounted} from "vue"
 import {useRoute, RouterLink} from "vue-router"
+import BackButton from "@/components/BackButton.vue"
 
 
 const route = useRoute()
@@ -15,7 +16,7 @@ const state = reactive({
 onMounted(async()=>{
     try{
 
-        const response = await fetch(`http://localhost:5000/jobs/${jobId}`)
+        const response = await fetch(`api/jobs/${jobId}`)
         const data = await response.json()
         state.job = data
     }catch(error){
@@ -28,6 +29,7 @@ onMounted(async()=>{
 </script>
 
 <template>
+  <BackButton />
     <section v-if="!state.isLoading" class="bg-violet-50">
       <div class="container m-auto py-10 px-6">
         <div class="grid grid-cols-1 md:grid-cols-70/30 w-full gap-6">
