@@ -7,7 +7,7 @@ import JobListings from "@/components/JobListings.vue"
 
 <template>
 
- <Hero title="Test Title" subTitle="Find vue jobs" />
+ <Hero />
  
 <HomeCards />
  
