@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "@/view/HomeView.vue";
-import JobsView from "@/view/JobsView.vue";
-import JobView from "@/view/JobView.vue";
-import NotFoundView from "@/view/NotFoundView.vue";
+import HomeView from "@/views/HomeView.vue";
+import JobsView from "@/views/JobsView.vue";
+import JobView from "@/views/JobView.vue";
+import NotFoundView from "@/views/NotFoundView.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
