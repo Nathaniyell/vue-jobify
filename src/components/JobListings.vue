@@ -1,5 +1,5 @@
 <script setup>
-import {ref, defineProps, onMounted} from "vue"
+import {reactive, defineProps, onMounted} from "vue"
 import JobListing from "./JobListing.vue"
 import {RouterLink} from "vue-router"
 
@@ -11,16 +11,21 @@ defineProps({
     }
 })
 
-const jobs = ref([])
+const state = reactive({
+jobs:[],
+isLoading: true
+})
 
 onMounted(async()=>{
     try{
 
         const response = await fetch("http://localhost:5000/jobs")
         const data = await response.json()
-        jobs.value = data
+        state.jobs = data
     }catch(error){
         console.error(error)
+    }finally{
+        state.isLoading = false
     }
 })
 
@@ -31,9 +36,14 @@ onMounted(async()=>{
 <div class="container-xl lg:container m-auto">
 <h2 class="text-3xl font-bold text-violet-500 mb-6 text-center">Browse Jobs</h2>
 
-<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+<section v-if="state.isLoading" class="text-center text-yellow-600 animate-pulse font-semibold text-3xl mt-4">
+    
+Loading Jobs...
+</section>
 
-    <JobListing v-for="job in jobs.slice(0,limit || jobs.length)" :key="job.id" :job="job" />
+<div v-else class="grid grid-cols-1 gap-6 md:grid-cols-3">
+
+    <JobListing v-for="job in state.jobs.slice(0,limit || state.jobs.length)" :key="job.id" :job="job" />
 
    
 </div>
