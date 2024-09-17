@@ -96,7 +96,6 @@ The application consists of the following main routes:
 ### Future Improvements
 
 - User authentication (Login/Signup)
-- Job application tracking system
 - Enhanced job filtering options (e.g., salary range, experience level)
 
 ### License
