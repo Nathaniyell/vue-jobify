@@ -18,10 +18,10 @@
           </a>
           <div class="md:ml-auto">
             <div class="flex space-x-2">
-              <a href=""
+              <a href="/"
                 class="text-white bg-violet-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2">Home</a>
-              <a href="" class="text-white hover:bg-violet-900 hover:text-white rounded-md px-3 py-2">Jobs</a>
-              <a href="" class="text-white hover:bg-violet-900 hover:text-white rounded-md px-3 py-2">Add Job</a>
+              <a href="/jobs" class="text-white hover:bg-violet-900 hover:text-white rounded-md px-3 py-2">Jobs</a>
+              <a href="/jobs/add" class="text-white hover:bg-violet-900 hover:text-white rounded-md px-3 py-2">Add Job</a>
             </div>
           </div>
         </div>
