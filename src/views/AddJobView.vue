@@ -1,9 +1,10 @@
 <script setup>
 import { reactive } from "vue"
 import router from "@/router"
+import {useToast} from "vue-toastification"
 
 
-
+const toast = useToast()
 const form = reactive({
     type: "Full-Time",
     title: "",
@@ -46,7 +47,7 @@ const formSubmitHandler = async () => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-
+toast.success("Job Added Successfully")
         const responseData = await response.json();
         const responseId = responseData.id; // Access the ID from the parsed response
 
@@ -54,6 +55,7 @@ const formSubmitHandler = async () => {
         router.push(`/jobs/${responseId}`);
         
     } catch (error) {
+        toast.error("Job was not Added")
         console.error("Error submitting job:", error);
     } finally {
         // Reset the form fields after submission
