@@ -55,7 +55,7 @@ This is a job search platform built with Vue.js that allows users to create, vie
    npm run serve
    ```
 
-6. Open your browser and go to `http://localhost:8080` to view the application.
+6. Open your browser and go to `http://localhost:5174` to view the application.
 
 ### File Structure
 
