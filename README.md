@@ -76,7 +76,8 @@ This is a job search platform built with Vue.js that allows users to create, vie
 
 ### Available Scripts
 
-- `npm run serve`: Starts the development server.
+- `npm run dev`: Starts the development server.
+- `npm run serve`: Starts the Json server.
 - `npm run build`: Builds the application for production.
 - `npm run lint`: Runs the linter to check for code style issues.
 
