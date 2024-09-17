@@ -21,7 +21,7 @@ defineProps({
 </script>
 
 <template>
-    <section class="relative bg-cover bg-center h-64 lg:h-screen grid place-items-center mb-4">
+    <section class="relative bg-cover bg-center h-64 lg:h-[80vh] grid place-items-center mb-4">
     <div class="absolute inset-0 bg-[url('../assets/images/vue4.jpg')] bg-cover bg-center filter brightness-50"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <div class="text-center">
