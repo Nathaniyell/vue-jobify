@@ -16,18 +16,19 @@ jobs:[],
 isLoading: true
 })
 
-onMounted(async()=>{
-    try{
-
-        const response = await fetch("api/jobs")
-        const data = await response.json()
-        state.jobs = data
-    }catch(error){
-        console.error(error)
-    }finally{
-        state.isLoading = false
+onMounted(async () => {
+    state.isLoading = true;
+    try {
+        const response = await fetch("/api/jobs"); 
+        const data = await response.json(); 
+        state.jobs = data; 
+    } catch (error) {
+        console.error("Error fetching jobs:", error);
+    } finally {
+        state.isLoading = false;
     }
-})
+});
+
 
 </script>
 

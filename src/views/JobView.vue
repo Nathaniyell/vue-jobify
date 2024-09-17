@@ -16,7 +16,7 @@ const state = reactive({
 onMounted(async()=>{
     try{
 
-        const response = await fetch(`api/jobs/${jobId}`)
+        const response = await fetch(`/api/jobs/${jobId}`)
         const data = await response.json()
         state.job = data
     }catch(error){

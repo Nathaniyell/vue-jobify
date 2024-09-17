@@ -8,14 +8,15 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  server:{
-    proxy:{
-      "/api":{
+  server: {
+    proxy: {
+      "/api": {
         target: "http://localhost:5000",
         changeOrigin: true,
-        rewrite:(path)=>path.replace(/^\/api/, "")
-      }
-    }
+        secure: false, // Optional: use this if your backend is running on HTTP
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
   },
   resolve: {
     alias: {
